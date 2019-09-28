@@ -30,20 +30,38 @@ class PqrController extends Controller
     public function store(Request $request)
     {
         $v = Validator::make($request->all(), [
-            'name' => 'required|unique',
-            'description' => 'required',
-            'email' => 'required',
-            'date' => 'required',
-            'file_id' => 'required',
-            'pqrs_type_request_id' => 'required',
-            'entity_id' => 'required',
+            'name'                  => 'required|unique:constructions',
+            'description'           => 'required',
+            'email'                 => 'required',
+            'date'                  => 'required',
+            'pqrs_type_request_id'  => 'required',
+            'entity_id'             => 'required',
         ]);
 
         if ($v->fails()) return response()->json($v->errors(), 400);
 
-        $entity = Pqr::create($request->all());
+        $data = $request->all();
+        
+        //Recibimos el archivo
+        $file_pqr = $request->file('file');
+        if ($file_pqr) {
+            //asignamos un nombre al archivo
+            $file_name = time().$file_pqr->getClientOriginalName();
+            //Pasamos el archivo al servidor.
+            Storage::disk('files')->put($file_name, FileFacades::get($file_pqr));
 
-        return response()->json(['message' => 'Creado correctamente.', 'data' => $entity], 201);
+            //Guardamos la infromacion en la DB
+            $file = new File();
+            $file->name = $file_pqr->getClientOriginalName();
+            $file->type = FileFacades::extension($file_name);
+            $file->ubication =  'storage/app/files_pqrs/';
+            $file->save();
+            $data['files_id'] = $file->id;
+        }
+
+        $pqr = Pqr::create($data);
+
+        return response()->json(['message' => 'Creado correctamente.', 'data' => $pqr], 201);
     }
 
     /**
