@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Participation extends Model
 {
     /**
+     * @var bool
+     */
+    public $timestamps = false;
+    /**
      * @var string
      */
     protected $table = 'participations';

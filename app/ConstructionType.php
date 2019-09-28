@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class ConstructionType extends Model
 {
+    /**
+     * @var bool
+     */
+    public $timestamps = false;
 
     /**
      * @var array

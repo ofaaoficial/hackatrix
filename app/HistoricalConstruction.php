@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class HistoricalConstruction extends Model
 {
     /**
+     * @var bool
+     */
+    public $timestamps = false;
+    /**
      * @var string
      */
     protected $table = 'historical_constructions';
