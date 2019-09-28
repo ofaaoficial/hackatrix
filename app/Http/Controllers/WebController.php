@@ -22,4 +22,16 @@ class WebController extends Controller
     public function obras(){
         return view('obras');
     }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function porfile(){
+        return view('pages-profile');
+    }
+
+    public function pqrs()
+    {
+        return view('pages-profile');
+    }
 }
