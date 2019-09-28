@@ -132,11 +132,10 @@
             alert('data');
         });
 
-        console.log(a.coordinates);
 
 
         new mapboxgl.Marker(el)
-            .setLngLat(a.coordinates)
+            .setLngLat([a.latitude, a.longitude])
             .addTo(map);
     })
 
