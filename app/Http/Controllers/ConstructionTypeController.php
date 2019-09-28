@@ -32,7 +32,7 @@ class ConstructionTypeController extends Controller
             'estimated_date_completion' => 'required|date',
             'objetive' => 'required',
             'general_observations' => 'required',
-            'coordinates' => 'required',
+            'coordinates' => 'required', 
             'entity_id' => 'required',
             'city_id' => 'required',
             'construction_type_id' => 'required',

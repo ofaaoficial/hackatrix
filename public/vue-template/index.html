@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/vue.js"></script>
+    <script src="assets/axios.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+
+    <div id="user">
+
+        <table border="1" >
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr v-for="item in list">
+                    <th v-text="item.name"></th>
+                    <th v-text="item.username"></th>
+                    <th v-text="item.phone"></th>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <hr>
+
+    <div id="post">
+
+        <table border="1" >
+            <thead>
+                <tr>
+                    <th>Body</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr v-for="item in list">
+                    <th v-text="item.body"></th>
+                    <th v-text="item.title"></th>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+    axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com/';    
+</script>
+
+<script src="assets/vue/usuario.js"></script>
+<!-- <script src="assets/vue/post.js"></script> -->
