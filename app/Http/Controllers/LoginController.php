@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function Login(Request $request){
+    public function login(Request $request){
         if($request->email && $request->password){
             $usuario = Usuario::where(['email' => $request->email])->first();
             if($usuario){
@@ -19,7 +19,7 @@ class LoginController extends Controller
         }
         return response()->json(["message" => "Datos de acceso incorrecto."], 401);
     }
-    public function Logout(Request $request){
+    public function logout(Request $request){
         try{
             $usuario = Usuario::where(['token' => $request->token])->first();
             $usuario->token = null;

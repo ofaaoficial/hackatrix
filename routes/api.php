@@ -34,4 +34,9 @@ Route::prefix('v1')->group(function(){
     Route::apiResource('pqrs_reply','PqrReplyController');
     Route::apiResource('pqrs_type_request','PqrTypeRequestController');
     Route::apiResource('roles','RolController');
+
+    Route::post('login','LoginController@login');
+    Route::get('login','LoginController@logout');
+
+
 });
