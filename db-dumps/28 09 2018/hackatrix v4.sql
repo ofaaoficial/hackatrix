@@ -1534,7 +1534,7 @@ CREATE TABLE `historical_constructions` (
   `id` int(11) NOT NULL,
   `description` varchar(45) NOT NULL,
   `construction_id` int(11) NOT NULL,
-  `file_id` int(11) NOT NULL,
+  `file_id` int(11),
   `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
