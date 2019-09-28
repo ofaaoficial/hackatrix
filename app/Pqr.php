@@ -22,7 +22,7 @@ class Pqr extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'description', 'entity_id', 'pqrs_type_request_id', 'files_id'
+        'name', 'email', 'description', 'entity_id', 'pqrs_type_request_id', 'files_id', 'date'
     ];
 
     /**
