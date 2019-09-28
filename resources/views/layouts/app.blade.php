@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="{{asset('css/colors/blue.css')}}" id="theme" rel="stylesheet">
 
+    
+    <script src="{{ asset('js/vue.js')}}"></script>
+    <script src="{{ asset('js/axios.js')}}"></script>
 
 </head>
 
@@ -32,7 +35,6 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">
                     <b>
-
                         <img src="{{ asset('assets/images/logo-light-icon.png') }}" alt="homepage" class="light-logo" />
                     </b>
                     <span>
@@ -65,15 +67,15 @@
         <div class="scroll-sidebar">
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Escritorio</span></a>
+                    <li> <a class="waves-effect waves-dark" href="" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Escritorio</span></a>
                     </li>
-                    <li> <a class="waves-effect waves-dark" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Perfil</span></a>
+                    <li> <a class="waves-effect waves-dark" href="{{ route('web.profile') }}" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Perfil</span></a>
                     </li>
-                    <li> <a class="waves-effect waves-dark" href="obras.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Obras</span></a>
+                    <li> <a class="waves-effect waves-dark" href="{{ route('web.obras') }}" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Obras</span></a>
                     </li>
-                    <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">PQRS</span></a>
+                    <li> <a class="waves-effect waves-dark" href="{{ route('web.pqrs') }}" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">PQRS</span></a>
                     </li>
-                    <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i class="mdi mdi-power"></i><span class="hide-menu">Salir</span></a>
+                    <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-power"></i><span class="hide-menu">Salir</span></a>
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
