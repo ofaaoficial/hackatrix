@@ -20,6 +20,7 @@ class WebController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function obras(){
-        return view('obras');
+        $obras = Construction::all();
+        return view('obras', compact('obras'));
     }
 }

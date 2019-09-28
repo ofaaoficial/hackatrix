@@ -108,6 +108,9 @@
 <script src="{{ asset('js/sidebarmenu.js')}}"></script>
 <script src="{{ asset('assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')}}"></script>
 <script src="{{ asset('js/custom.min.js')}}"></script>
+<script src="{{ asset('js/axios.js')}}"></script>
+<script src="{{ asset('js/vue.js')}}"></script>
+@yield('scripts')
 </body>
 
 </html>

@@ -15,7 +15,7 @@ class ConstructionController extends Controller
      */
     public function index()
     {
-        return response()->json(Construction::all(), 200);
+        return response()->json(Construction::all()->load(['city', 'entity']), 200);
     }
 
     /**
