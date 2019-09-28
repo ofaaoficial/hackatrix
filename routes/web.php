@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('map', 'WebController@map');
+Route::get('obras', 'WebController@obras');
+
+
+
