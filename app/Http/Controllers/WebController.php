@@ -23,4 +23,16 @@ class WebController extends Controller
         $obras = Construction::all();
         return view('obras', compact('obras'));
     }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function porfile(){
+        return view('pages-profile');
+    }
+
+    public function pqrs()
+    {
+        return view('pages-profile');
+    }
 }
