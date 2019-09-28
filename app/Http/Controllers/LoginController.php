@@ -22,7 +22,7 @@ class LoginController extends Controller
             $user = $this->guard()->user();
             $user->token = str_random(100). date('ym');
             $user->save();
-            return response()->json(['message' => 'Ingreso satisfactorio.', 'token' => $user->token], 200);
+            return response()->json(['message' => 'Ingreso satisfactorio.', 'information' => $user], 200);
         }
         return response()->json(['message' => 'Datos de acceso incorrectos.'], 400);
     }

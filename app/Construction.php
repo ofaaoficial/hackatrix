@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Construction extends Model
 {
+
     /**
      * @var string
      */
