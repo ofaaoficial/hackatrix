@@ -27,8 +27,10 @@ class EntityController extends Controller
     public function store(Request $request)
     {
         $v = Validator::make($request->all(), [
-            'name' => 'required|unique',
-            'code' => 'required|unique',
+            'name' => 'required|unique:entities',
+            'phone_contact' => 'required',
+            'email' => 'required|email',
+            'country_id' => 'required',
         ]);
 
         if($v->fails()) return response()->json($v->errors(), 400);

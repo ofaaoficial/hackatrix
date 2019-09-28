@@ -16,6 +16,15 @@ class PqrReply extends Model
      */
     public $timestamps = false;
 
+    /** 
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'answer',	'date',	'files_id',	'pqr_id'
+    ];
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
