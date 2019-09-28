@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File as FileFacades;
 use App\HistoricalConstruction;
+use App\File;
+use Validator;
 
 class HistoricalController extends Controller
 {
@@ -26,13 +30,33 @@ class HistoricalController extends Controller
     public function store(Request $request)
     {
         $v = Validator::make($request->all(), [
-            'name' => 'required|unique',
-            'code' => 'required|unique',
+            'description'     => 'required',
+            'construction_id' => 'required',
+            'date'            => 'required',
         ]);
 
         if ($v->fails()) return response()->json($v->errors(), 400);
 
-        $historical = HistoricalConstruction::create($request->all());
+        $data = $request->all();
+        
+        //Recibimos el archivo
+        $file_pqr = $request->file('file');
+        if ($file_pqr) {
+            //asignamos un nombre al archivo
+            $file_name = time().$file_pqr->getClientOriginalName();
+            //Pasamos el archivo al servidor.
+            Storage::disk('files')->put($file_name, FileFacades::get($file_pqr));
+
+            //Guardamos la infromacion en la DB
+            $file = new File();
+            $file->name = $file_pqr->getClientOriginalName();
+            $file->type = FileFacades::extension($file_name);
+            $file->ubication =  'storage/app/files_pqrs/';
+            $file->save();
+            $data['file_id'] = $file->id;
+        }
+
+        $historical = HistoricalConstruction::create($data);
 
         return response()->json(['message' => 'Creado correctamente.', 'data' => $historical], 201);
     }
