@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\City;
-use Validator;
+use ConstructionType;
 
-class CityController extends Controller
+class ConstructionTypeController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +15,7 @@ class CityController extends Controller
      */
     public function index()
     {
-        return response()->json(City::all(), 200);
+        return response()->json(ConstructionType::all(), 200);
     }
 
     /**
@@ -28,15 +28,22 @@ class CityController extends Controller
     {
         $v = Validator::make($request->all(), [
             'name' => 'required',
-            'department_id' => 'required',
-            'country_id' => 'required',
+            'start_date' => 'required|date',
+            'estimated_date_completion' => 'required|date',
+            'objetive' => 'required',
+            'general_observations' => 'required',
+            'coordinates' => 'required',
+            'entity_id' => 'required',
+            'city_id' => 'required',
+            'construction_type_id' => 'required',
+            'money_invested' => 'required',
         ]);
 
         if($v->fails()) return response()->json($v->errors(), 400);
 
-        $city = City::create($request->all());
+        $construction_type = ConstructionType::create($request->all());
 
-        return response()->json(['message' => 'Creado correctamente.', 'data' => $city], 201);
+        return response()->json(['message' => 'Creado correctamente.', 'data' => $construction_type], 201);
     }
 
     /**
@@ -47,8 +54,8 @@ class CityController extends Controller
      */
     public function show($id)
     {
-        $city = City::find($id);
-        if($city) return response()->json($city, 200);
+        $construction_type = ConstructionType::find($id);
+        if($construction_type) return response()->json($construction_type, 200);
 
         return response()->json(['message' => 'No se encontro el registro'], 400);
     }
@@ -62,10 +69,10 @@ class CityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $city = City::find($id);
-        if(!$city) return response()->json(['message' => 'No se encontro el registro'], 400);
+        $construction_type = ConstructionType::find($id);
+        if(!$construction_type) return response()->json(['message' => 'No se encontro el registro'], 400);
 
-        $city->update($request->all());
+        $construction_type->update($request->all());
         return response()->json(['message' => 'Actualizado correctamente.'], 200);
     }
 }
