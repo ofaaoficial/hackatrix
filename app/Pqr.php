@@ -6,7 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pqr extends Model
 {
+    /**
+     * @var bool
+     */
     public $timestamps = false;
+
+    /**
+     * @var string
+     */
+    protected $table = 'pqrs';
 
     /** 
      * The attributes that are mass assignable.

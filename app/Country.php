@@ -6,7 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
+    /**
+     * @var bool
+     */
     public $timestamps = false;
+
+    /**
+     * @var string
+     */
+    protected $table = 'countries';
+
+    /**
+     * @var array
+     */
+    protected $fillable = ['name'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

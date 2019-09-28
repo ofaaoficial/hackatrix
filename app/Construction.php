@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Construction extends Model
 {
+    /**
+     * @var string
+     */
+    protected $table = 'constructions';
+
+    /**
+     * @var bool
+     */
     public $timestamps = false;
 
     /**

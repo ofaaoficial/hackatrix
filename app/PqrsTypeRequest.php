@@ -6,7 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class PqrsTypeRequest extends Model
 {
+    /**
+     * @var string
+     */
     protected $table = 'pqrs_types_request';
+
+    /**
+     * @var bool
+     */
     public $timestamps = false;
 
     /**

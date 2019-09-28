@@ -6,7 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class PqrReply extends Model
 {
+    /**
+     * @var string
+     */
     protected $table = 'pqrs_replies';
+
+    /**
+     * @var bool
+     */
     public $timestamps = false;
 
     /**

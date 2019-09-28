@@ -6,8 +6,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Entity extends Model
 {
+    /**
+     * @var bool
+     */
     public $timestamps = false;
+    
+    /**
+     * @var string
+     */
+    protected $table = 'entities';
 
+    /**
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'phone_contact',
+        'email',
+        'country_id'
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
