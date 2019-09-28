@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use ConstructionType;
-
+use App\ConstructionType;
+use Validator;
 class ConstructionTypeController extends Controller
 {
 
@@ -27,16 +27,7 @@ class ConstructionTypeController extends Controller
     public function store(Request $request)
     {
         $v = Validator::make($request->all(), [
-            'name' => 'required',
-            'start_date' => 'required|date',
-            'estimated_date_completion' => 'required|date',
-            'objetive' => 'required',
-            'general_observations' => 'required',
-            'coordinates' => 'required',
-            'entity_id' => 'required',
-            'city_id' => 'required',
-            'construction_type_id' => 'required',
-            'money_invested' => 'required',
+            'name' => 'required'
         ]);
 
         if($v->fails()) return response()->json($v->errors(), 400);
