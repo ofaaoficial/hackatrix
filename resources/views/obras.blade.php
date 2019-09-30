@@ -3,7 +3,6 @@
 
 
     <div class="container-fluid" id="app">
-        @{{ obras }}
         <!-- MODAL NEW OBRA-->
         <div class="modal" id="myModal">
             <div class="modal-dialog modal-lg">
@@ -149,19 +148,57 @@
                                 <th class="text-center">ESTADO</th>
                                 <th class="text-center">PQRS</th>
                             </tr>
-                            <tr v-for="obra in obras" >
-                                <td>@{{ obra.name }}</td>
-                                <th>@{{ obra.city.name }}</th>
-                                <td>@{{ obra.money_invested }}</td>
-                                <td>@{{ obra.general_observations }}</td>
-                                <td>@{{ obra.objetive }}</td>
-                                <td>@{{ obra.start_date }}</td>
-                                <td>@{{ obra.estimated_date_completion }}</td>
-                                <td>@{{ obra.state }}</td>
-
+                            <tr>
+                                <td>Av Bosa hasta Av San bernandino</td>
+                                <th>Bogota</th>
+                                <td>$ 180.000.000</td>
+                                <td>Contara con 2 calzadas de 3 carriles, andenes, estacio publico y separador</td>
+                                <td></td>
+                                <td>2018-05-09</td>
+                                <td>De 1 a 2 años</td>
+                                <td>En contruccion</td>
                                 <td class="text-center"><a href="" data-toggle="modal" data-target="#myModal2"><i
                                                 class="fas fa-qrcode text-dark"></i></a></td>
                             </tr>
+                            <tr>
+                                <td>Av Suba 116</td>
+                                <th>Bogota</th>
+                                <td>$ 100.000.000</td>
+                                <td>Reparar las vias</td>
+                                <td></td>
+                                <td>2018-02-19</td>
+                                <td>1 año</td>
+                                <td>En contruccion</td>
+                                <td class="text-center"><a href="" data-toggle="modal" data-target="#myModal2"><i
+                                                class="fas fa-qrcode text-dark"></i></a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Calle 72</td>
+                                <th>Bogota</th>
+                                <td>$ 200.000.000</td>
+                                <td>Contara con 2 calzadas de 3 carriles, andenes, estacio publico y separador</td>
+                                <td></td>
+                                <td>2018-05-09</td>
+                                <td>De 1 a 2 años</td>
+                                <td>En contruccion</td>
+                                <td class="text-center"><a href="" data-toggle="modal" data-target="#myModal2"><i
+                                                class="fas fa-qrcode text-dark"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Av Bosa hasta Av San bernandino</td>
+                                <th>Bogota</th>
+                                <td>$ 180.000.000</td>
+                                <td>Contara con 2 calzadas de 3 carriles, andenes, estacio publico y separador</td>
+                                <td></td>
+                                <td>2018-05-09</td>
+                                <td>De 1 a 2 años</td>
+                                <td>En contruccion</td>
+                                <td class="text-center"><a href="" data-toggle="modal" data-target="#myModal2"><i
+                                                class="fas fa-qrcode text-dark"></i></a></td>
+                            </tr>
+                            
+                            
 
                         </table>
                     </div>
@@ -170,9 +207,10 @@
         </div>
 
     </div>
+
 @endsection
 @section('scripts')
-    <script>
+    {{-- <script>
         const URL_PATH = 'http://localhost/hackatrix/public/api/v1/';
 
         new Vue({
@@ -213,5 +251,5 @@
             }
 
         });
-    </script>
+    </script> --}}
 @endsection

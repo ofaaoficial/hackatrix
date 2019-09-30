@@ -20,12 +20,7 @@
             <div class="card">
                 <div class="card-block">
                     <center class="m-t-30"> <img src="{{ asset('assets/images/users/5.jpg')}}" class="img-circle" width="150" />
-                        <h4 class="card-title m-t-10">Hanna Gover</h4>
-                        <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
-                        <div class="row text-center justify-content-md-center">
-                            <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium">254</font></a></div>
-                            <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium">54</font></a></div>
-                        </div>
+                        <h4 class="card-title m-t-10">Kevin</h4>
                     </center>
                 </div>
             </div>
@@ -36,31 +31,31 @@
                 <div class="card-block">
                     <form class="form-horizontal form-material">
                         <div class="form-group">
-                            <label class="col-md-12">Full Name</label>
+                            <label class="col-md-12">Nombre Completo</label>
                             <div class="col-md-12">
-                                <input type="text" class="form-control form-control-line">
+                                <input value="Kevin Galindo" type="text" class="form-control form-control-line">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="example-email" class="col-md-12">Email</label>
+                            <label for="example-email" class="col-md-12">Correo Electronico</label>
                             <div class="col-md-12">
-                                <input type="email" class="form-control form-control-line" name="example-email" id="example-email">
+                                <input value="galindok829@gmail.com" type="email" class="form-control form-control-line" name="example-email" id="example-email">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12">Password</label>
+                            <label class="col-md-12">Contraseña</label>
                             <div class="col-md-12">
-                                <input type="password" class="form-control form-control-line">
+                                <input value="............" type="password" class="form-control form-control-line">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12">Phone No</label>
+                            <label class="col-md-12">Telefono</label>
                             <div class="col-md-12">
-                                <input type="text"       class="form-control form-control-line">
+                                <input type="text" value="30538778644"  class="form-control form-control-line">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-12">Select Country</label>
+                            <label class="col-sm-12">Ciudad</label>
                             <div class="col-sm-12">
                                 <select class="form-control form-control-line">
                                     <option v-for="item in listCountry" v-text="item.name"></option>
