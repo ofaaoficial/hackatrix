@@ -33,6 +33,21 @@ class WebController extends Controller
 
     public function pqrs()
     {
-        return view('pages-profile');
+        return view('pqrs-user');
+    }
+
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function login_auth()
+    {
+        return  redirect()->route('web.obras');
+    }
+
+    public function home()
+    {
+        return view('HomePageUser');
     }
 }
