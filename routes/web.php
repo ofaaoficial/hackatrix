@@ -12,13 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('HomePageUser');
 });
 
 Route::get('map', 'WebController@map')->name('web.map');
 Route::get('obras', 'WebController@obras')->name('web.obras');
 Route::get('porfile', 'WebController@porfile')->name('web.profile');
+
 Route::get('pqrs', 'WebController@pqrs')->name('web.pqrs');
 
 
+Route::get('home', 'WebController@home')->name('web.home');
+Route::get('login', 'WebController@login')->name('web.login');
+Route::get('login/auth', 'WebController@login_auth')->name('login');
 
