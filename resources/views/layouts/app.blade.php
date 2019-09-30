@@ -33,13 +33,13 @@
         <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
 
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{route('web.home')}}">
                     <b>
-                        <img src="{{ asset('assets/images/logo-light-icon.png') }}" alt="homepage" class="light-logo" />
+                        {{-- <img src="{{ asset('assets/images/logo-light-icon.png') }}" alt="homepage" class="light-logo" /> --}}
                     </b>
                     <span>
-
-                         <img src="{{ asset('assets/images/logo-light-text.png') }}" class="light-logo" alt="homepage" /></span> </a>
+                        <span class="text-white">TheBigTeam</span>
+                         {{-- <img src="{{ asset('assets/images/logo-light-text.png') }}" class="light-logo" alt="homepage" /></span> </a> --}}
             </div>
 
             <div class="navbar-collapse">
@@ -56,7 +56,7 @@
                 <ul class="navbar-nav my-lg-0">
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('assets/images/users/1.jpg') }}" alt="user" class="profile-pic m-r-10" />Markarn Doe</a>
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('assets/images/users/1.jpg') }}" alt="user" class="profile-pic m-r-10" />Kevin</a>
                     </li>
                 </ul>
             </div>
@@ -67,7 +67,7 @@
         <div class="scroll-sidebar">
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li> <a class="waves-effect waves-dark" href="" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Escritorio</span></a>
+                    <li> <a class="waves-effect waves-dark" href="{{route('web.home')}}" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Escritorio</span></a>
                     </li>
                     <li> <a class="waves-effect waves-dark" href="{{ route('web.profile') }}" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Perfil</span></a>
                     </li>
@@ -75,12 +75,9 @@
                     </li>
                     <li> <a class="waves-effect waves-dark" href="{{ route('web.pqrs') }}" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">PQRS</span></a>
                     </li>
-                    <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-power"></i><span class="hide-menu">Salir</span></a>
+                <li> <a class="waves-effect waves-dark" href="{{ url('/login') }}" aria-expanded="false"><i class="mdi mdi-power"></i><span class="hide-menu">Salir</span></a>
                     </li>
                 </ul>
-                <div class="text-center m-t-30">
-                    <a href="https://wrappixel.com/templates/materialpro/" class="btn waves-effect waves-light btn-warning hidden-md-down"> Upgrade to Pro</a>
-                </div>
             </nav>
         </div>
 
@@ -95,7 +92,7 @@
         @yield('content')
 
         <footer class="footer">
-            © 2017 Material Pro Admin by wrappixel.com
+            © 2019  - TheBigTeam
         </footer>
 
     </div>
