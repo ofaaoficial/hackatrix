@@ -28,13 +28,17 @@ Se podrá ver la información de la obra por medio de la página o con realidad 
 Para ver la información con realidad aumentada el usuario debe permitir acceder a la cámara del dispositivo móvil.
 
 ## 🤓 Tecnologías
-###Back-End
+
+### Back-End
 * Laravel 6
+
 ### Front-End
 * VueJS CLI o React
+
 ### Design 
 * Semantic-UI
-###Others:
+
+### Others:
 * Three.js
 * Mapbox GL JS
 
