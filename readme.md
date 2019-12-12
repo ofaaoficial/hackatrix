@@ -1,65 +1,65 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+## 🔥 Participación en Hackatrix Bogotá 👨‍🎓
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+### 🎟 ¿Qué es una hackatrix? 
+Es una hackaton organizada por Belatrix, la cual se celebra tradicionalmente cada año tiene como objetivo promover el desarrollo colectivo de ideas sociales e innovadoras bajo la atmósfera competitiva, divertida y, sobre todo, gratuita.
 
-## About Laravel
+### Metodología de trabajo
+Trabajamos con la metodología ágil de desarrollo `` SCRUM `` delegando roles según la experiencia de cada integrante del equipo.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+### 🏃‍♂️ Equipo de trabajo 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* Javier Mora – Product Owner 🕵️‍♂️
+* Oscar Amado – Scrum Master 🤵
+* Robinson Cortes – Front-End 👨‍💻
+* Kevin Galindo – Back-End 🕴
+* Nicolas – Team SCRUM 🙎‍♂️ 
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+### 💡 Idea principal 
+Seguimiento de las obras que se realicen en la ciudad
+* Ver el avance de las obras 
+* Comunicar sus quejas, sugerencias o preguntas (PQRS).
+* Información de la obra la idea es mostrar toda la información posible sobre las obras.
 
-## Learning Laravel
+### 🤨 ¿Cómo funcionara? 
+Una persona ira por la calle observa una obra y desea saber información, en la obra habrá un código QR el cual lo re direccionará a nuestro sistema, se mostrará de manera amigable al usuario toda la información relacionada a la obra y tendrá una opción para poder hacer peticiones, quejas o recursos. 
+Además, por geolocalización podrán ver en 3D de la obra finalizada.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+Se podrá ver la información de la obra por medio de la página o con realidad aumentada.
+Para ver la información con realidad aumentada el usuario debe permitir acceder a la cámara del dispositivo móvil.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+## 🤓 Tecnologías
+###Back-End
+* Laravel 6
+### Front-End
+* VueJS CLI o React
+### Design 
+* Semantic-UI
+###Others:
+* Three.js
+* Mapbox GL JS
 
-## Laravel Sponsors
+```
+Una vez en competencia en la hackatrix concluimos y aclaramos más las ideas sobre lo que íbamos a hacer.
+```
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+### 🧐 Descripción de la problemática
+Se evidencia carencia de accesibilidad a la información en las obras públicas realizadas en las distintas localidades de la ciudad. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
+Las personas no acceden a la información debido a la complejidad al momento de obtenerla, tampoco existe una plataforma web donde se evidencie el avance real y el seguimiento de estas obras.
+No hay manera de generar ni gestionar PQR’s, además no hay transparencia respecto a los fondos destinados para cada obra y no existe un cronograma de actividades.
 
-## Contributing
+### 📌 Objetivo general
+Como objetivo general se desea desarrollar una herramienta que permita al usuario la participación con respecto al seguimiento de las obras realizadas en la ciudad, a su vez brindarles a los ciudadanos un fácil acceso a la información de dichas obras
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 🎯 Objetivos específicos 
+* Desarrollar una aplicación web, donde por medio de códigos QR, permita visualizar en tiempo real información de las obras con la implementación de la cámara del móvil
+* Desarrollar un portal donde se puedan gestionar los pqrs de los ciudadanos
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 📏 Alcance
+Se pretende desplegar la funcionalidad del software inicialmente en la ciudad de Bogotá, donde para la implementación de esta aplicación se requieren unas placas metálicas en donde se pueda poner un código QR, que posteriormente podrá ser usado mediante la cámara de un Smartphone.
 
-## License
+En términos de desarrollo se desea realizar una página web donde se muestren las obras que están en ejecución y su estado actual, donde por medio de un mapa se verán ubicadas, a nivel de desarrollo móvil se mostrara la opción de visor QR, donde una vez analizado el código, se podrá redirigir a la página principal, o se podrá obtener una visualización con realidad aumentada de los avances y alguna información básica de la obra.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## License 🔥
+Copyright © 2019-present [Oscar Amado](https://github.com/ofaaoficial) 🧔
